@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "react/prop-types": 0,
+    "quotes": [2, "single", "avoid-escape"],
+    "arrow-parens": 0
+  },
+  "extends": ["defaults/configurations/walmart/es6-react"]
+}

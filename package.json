@@ -1,0 +1,39 @@
+{
+  "name": "AlienPro",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "eslint ./common",
+    "test": "mocha --opts mocha.opts common/tests/**/*.spec.js",
+    "check-cov": "istanbul cover node_modules/mocha/bin/_mocha --print detail -- --compilers js:common/tests/compiler.js --require common/tests/setup.js --colors  ./common/tests/**/*.spec.js"
+  },
+  "dependencies": {
+    "fetch-promise": "^1.0.1",
+    "react-native": "^0.20.0",
+    "react-redux": "^4.1.2",
+    "redux": "^3.1.7",
+    "redux-thunk": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.4.1",
+    "enzyme": "^2.0.0",
+    "eslint": "^2.1.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-flowtype": "^1.0.0",
+    "eslint-plugin-react": "^3.16.1",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^2.4.5",
+    "react": "^0.14.7",
+    "react-addons-test-utils": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  }
+}

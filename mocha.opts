@@ -1,0 +1,2 @@
+--compilers js:common/tests/compiler.js
+--require common/tests/setup.js
