@@ -16,9 +16,10 @@ export default class PostContainer extends Component<
   PostContainerPropType,
   NullType
 > {
-  onPress(url) {
+  onPress(url: string) {
     Linking.openURL(url);
   }
+
   render(): TouchableHighlight {
     const { title, url } = this.props;
     return (

@@ -1,15 +1,15 @@
 import {
   NEW_POSTS
-} from "../action-types/post-actions";
+} from '../action-types/post-actions';
 
-const REDDIT_API = "https://api.reddit.com";
+const REDDIT_API = 'https://api.reddit.com';
 
 export function newPosts(posts) {
   return {
     type: NEW_POSTS,
     posts
   };
-};
+}
 
 export function fetchPosts() {
   return (dispatch) => {
@@ -26,4 +26,4 @@ export function fetchPosts() {
         return dispatch(newPosts(posts));
       });
   };
-};
+}

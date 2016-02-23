@@ -1,19 +1,19 @@
-import { NEW_POSTS } from "../action-types/post-actions";
+/* @flow */
+import { NEW_POSTS } from '../action-types/post-actions';
+import type { StoreType } from '../types/store-type';
 
-const initialState = {
+const initialState: StoreType = {
   posts: [{
-    url: "http://www.google.com",
-    title: "Hey I am a post"
+    url: 'http://www.google.com',
+    title: 'Hey I am a post'
   }]
 };
 
-export function alienProApp(state = initialState, action) {
-  console.log(action);
+export function alienProApp(state: StoreType = initialState, action: any): StoreType {
   switch (action.type) {
-    case NEW_POSTS:
-      const newState = Object.assign({}, state, {posts: action.posts});
-      return newState;
-    default:
-      return state;
+  case NEW_POSTS:
+    return Object.assign({}, state, {posts: action.posts});
+  default:
+    return state;
   }
-};
+}

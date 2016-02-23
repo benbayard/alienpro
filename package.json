@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "lint": "eslint ./common",
+    "lint": "eslint ./common/src",
     "test": "mocha --opts mocha.opts common/tests/**/*.spec.js",
     "check-cov": "istanbul cover node_modules/mocha/bin/_mocha --print detail -- --compilers js:common/tests/compiler.js --require common/tests/setup.js --colors  ./common/tests/**/*.spec.js"
   },
@@ -23,7 +23,7 @@
     "chai": "^3.5.0",
     "chai-enzyme": "^0.4.1",
     "enzyme": "^2.0.0",
-    "eslint": "^2.1.0",
+    "eslint": "^1.1.0",
     "eslint-config-defaults": "^9.0.0",
     "eslint-plugin-filenames": "^0.2.0",
     "eslint-plugin-flowtype": "^1.0.0",

@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 
-import { PostList } from '../../src/components';
+import { PostList } from '../../src/components/post-list';
 
 describe('<PostContainer />', () => {
   let component;
@@ -12,26 +12,20 @@ describe('<PostContainer />', () => {
 
   beforeEach(() => {
     props = {
-      url: 'yay',
-      title: 'title'
+      posts: [
+        'yay',
+        'boo'
+      ]
     };
 
-    sandbox = sinon.sandbox.create({
-      useFakeServer: true
-    });
-
-    component = shallow(<PostList {...props}  />);
-  });
-
-  afterEach(() => {
-    sandbox.restore();
+    component = shallow(<PostList {...props} />);
   });
 
   it('should return a view', () => {
     expect(component.is('View')).to.be.true;
   });
 
-  it('should make a request to the reddit api server', () => {
-    expect(sandbox.server.requests[0]).to.exist;
+  it('should use the props to make a dataSource', () => {
+    expect(component.state('posts')).to.equal(props.posts);
   });
 });

@@ -1,1 +1,1 @@
-export const NEW_POSTS = "NEW_POSTS";
+export const NEW_POSTS = 'NEW_POSTS';
