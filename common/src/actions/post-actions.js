@@ -1,6 +1,6 @@
 import {
   NEW_POSTS
-} from '../action-types/post-actions';
+} from '../action-types/post-action-types';
 
 const REDDIT_API = 'https://api.reddit.com';
 
@@ -16,14 +16,7 @@ export function fetchPosts() {
     return fetch(REDDIT_API)
       .then(response => response.json())
       .then(response => {
-        const { children } = response.data;
-
-        const posts = children.map(post => ({
-          title: post.data.title,
-          url: post.data.url
-        }));
-
-        return dispatch(newPosts(posts));
+        return dispatch(newPosts(response));
       });
   };
 }

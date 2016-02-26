@@ -2,9 +2,9 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 20,
+    fontSize: 13,
     textAlign: 'left',
-    margin: 10,
+    margin: 5,
     fontFamily: 'Avenir Next'
   }
 });

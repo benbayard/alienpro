@@ -4,24 +4,16 @@ import React, {
   ListView,
   View
 } from 'react-native';
-import { connect } from 'react-redux';
 
 import PostContainer from './post-container';
 import styles from '../styles/containers';
-import { fetchPosts } from '../actions';
 import { PostListPropType } from '../types/prop-types/post-list-prop-type';
 
-export class PostList extends Component<
+export default class PostList extends Component<
   PostListPropType,
   PostListPropType,
   PostListPropType
 > {
-  componentDidMount() {
-    this.props.dispatch(
-      fetchPosts()
-    );
-  }
-
   componentWillReceiveProps(nextProps: PostListPropType) {
     this.setState({
       posts: this.ds.cloneWithRows(nextProps.posts)
@@ -51,9 +43,3 @@ export class PostList extends Component<
 PostList.defaultProps = {
   posts: []
 };
-
-export default connect(
-  state => ({
-    posts: state.posts
-  })
-)(PostList);

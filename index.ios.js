@@ -20,7 +20,7 @@ import { Provider } from "react-redux";
 import thunk from 'redux-thunk';
 
 import {
-  PostList
+  App
 } from "./common/src/components";
 
 import { fetchPosts } from "./common/src/actions";
@@ -47,8 +47,8 @@ class AlienPro extends Component {
         <NavigatorIOS
           style={styles.wrapper}
           initialRoute={{
-            component: PostList,
-            title: 'My View Title',
+            component: App,
+            title: 'Welcome to AlienPro',
           }}
         />
       </Provider>

@@ -24,7 +24,10 @@ export default class PostContainer extends Component<
     const { title, url } = this.props;
     return (
       <TouchableHighlight onPress={() => this.onPress(url)}>
-        <Text style={titleStyles.title}>{title}</Text>
+        <Text
+          style={titleStyles.title}
+          numberOfLines={2}
+        >{title}</Text>
       </TouchableHighlight>
     );
   }
